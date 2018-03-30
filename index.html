@@ -24,7 +24,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.min.js"></script>
 
     <!-- Custom Scripts -->
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/bundle.js"></script>
 
     <!--Main stylesheet-->
     <link type="text/css" href="css/index.css" rel="stylesheet">
@@ -36,11 +36,10 @@
           <div id="title-wrapper">
               <h1 id="main-title">Visual MAL</h1>
               <h4 id="main-subtitle">Exploring Your MyAnimeList Data</h4>
-              <input id="list-name" placeholder="Enter Your MAL username"/>
-              <input id="list-button" type="submit" value="Get List"/>
-              <div id="demo">
-
-              </div>
+              <form method="post" action="/getList">
+                <input type="text" placeholder="Enter your MAL username" name="username" required>
+                <input type="submit">
+              </form>
           </div>
         </div>
     </div>

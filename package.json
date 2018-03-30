@@ -1,0 +1,30 @@
+{
+  "name": "visual-mal",
+  "version": "1.0.0",
+  "description": "Visual MAL",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kurokuriboh/visual-mal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kurokuriboh/visual-mal/issues"
+  },
+  "homepage": "https://github.com/kurokuriboh/visual-mal#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "path": "^0.12.7",
+    "xml2js": "^0.4.19"
+  }
+}
