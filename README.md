@@ -5,15 +5,18 @@ myanimelist.com profile.
 
 This website is inspired by [GRAPH.ANIME.PLUS](https://graph.anime.plus/).
 
-## Documentation
+## Instructions
 
-All documentations are provided in [docs](docs/) repo.
+Install node modules with `node install` then execute `node main.js` to run server. 
+Website is available at `localhost:3000`.
 
-## Contributing
+## Todo
 
-The project follows typical pull request model. Read [contributing guide](CONTRIBUTING.md) to learn 
-more about the development process and how to propose improvements. Please file for 
-an issue before starting any work.
+- History of all anime broken down by {episode, season} by {day, week, month, year} as a timeline or a gantt chart
+- distribution of score vs {time/date, genre, rating, tags, etc}
+- Comparison of you vs friends for any of the above metric
+- Recent history graph
+- Eps per day/week/month as a bar chart for >21 days ago
 
 ## License
 

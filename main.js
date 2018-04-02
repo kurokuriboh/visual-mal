@@ -37,7 +37,11 @@ function getList(req) {
     })
     .then(response => {
         xml2js.parseString(response.data, function(err, result) {
-            console.log(result.myanimelist.anime.length);
+            var animes = result.myanimelist.anime;
+            var animeList = [];
+            for (var anime in animes) {
+                animeList.push(anime.series_title);
+            }
         });
     })
     .catch(error => {
