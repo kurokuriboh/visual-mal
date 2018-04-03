@@ -18,6 +18,29 @@ Website is available at `localhost:3000`.
 - Recent history graph
 - Eps per day/week/month as a bar chart for >21 days ago
 
+## MyAnimeList API
+
+**Note: Postman is recommended**
+
+[Official MAL API document](https://myanimelist.net/modules.php?go=api) 
+
+Get user's anime list:
+```
+curl "https://myanimelist.net/malappinfo.php?status=all&type=anime&u=USERNAME"
+```
+
+**Note: The following are requests for html results and the results need to parse before using**
+
+Get user's friend list:
+```
+curl "https://myanimelist.net/profile/USERNAME/friends"
+```
+
+Get watching history per anime (may need to handle cookies/credentials to bypass login):
+```
+curl "https://myanimelist.net/ajaxtb.php?keepThis=true&detailedaid=36038&TB_iframe=true"
+```
+
 ## License
 
 MIT License
