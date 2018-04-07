@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   
     <!--jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
     <!--d3-->
     <script type="text/javascript" src="js/d3.min.js"></script>
@@ -35,13 +35,21 @@
           <div id="title-wrapper">
               <h1 id="main-title">Visual MAL</h1>
               <h4 id="main-subtitle">Exploring Your MyAnimeList Data</h4>
-              <form method="post" action="/getList">
-                <input type="text" placeholder="Enter your MAL username" name="username" required>
-                <input type="submit">
-              </form>
-
-
-              <div id="anime-list"></div>
+              <fieldset>
+                <form action="/getList" method="post">
+                  <input name="username" type="text" class="ghost-input" placeholder="Enter your MAL username" required>
+                  <input type="submit" class="ghost-button" value="Get username">
+                </form>
+              </fieldset>
+              <% if(animeList !== null){ %>
+                <% animeList.forEach(function(anime){ %>
+                <p><%= anime %></p>
+                <% }); %>
+              <% } %>
+      
+              <% if(error !== null){ %>
+                <p><%= error %></p>
+              <% } %>
           </div>
         </div>
     </div>
