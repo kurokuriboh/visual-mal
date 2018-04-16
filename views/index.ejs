@@ -8,12 +8,6 @@
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   
-    <!--jQuery-->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-
-    <!--d3-->
-    <script type="text/javascript" src="js/d3.min.js"></script>
-
     <!--FontAwesome-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -38,13 +32,19 @@
               <fieldset>
                 <form action="/getList" method="post">
                   <input name="username" type="text" class="ghost-input" placeholder="Enter your MAL username" required>
-                  <input type="submit" class="ghost-button" value="Get username">
+                  <input type="submit" class="ghost-button" value="Get Anime info">
+                </form>
+                <form action="/getFriends" method="post">
+                  <input name="username" type="text" class="ghost-input" placeholder="Enter your MAL username" required>
+                  <input type="submit" class="ghost-button" value="Get Friends">
                 </form>
               </fieldset>
               <% if(animeList !== null){ %>
-                <% animeList.forEach(function(anime){ %>
-                <p><%= anime %></p>
-                <% }); %>
+                <p><%= animeList %></p>
+              <% } %>
+              
+              <% if(friendList != null) { %>
+                <p><%= friendList %></p>
               <% } %>
       
               <% if(error !== null){ %>

@@ -15,6 +15,7 @@ Website is available at `localhost:3000`.
 - History of all anime broken down by {episode, season} by {day, week, month, year} as a timeline or a gantt chart
 - distribution of score vs {time/date, genre, rating, tags, etc}
 - Comparison of you vs friends for any of the above metric
+    - ~~Get user's friend list~~
 - Recent history graph
 - Eps per day/week/month as a bar chart for >21 days ago
 
