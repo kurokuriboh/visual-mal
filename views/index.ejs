@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Visual MAL</title>
+    <title>Visual Kitsu</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico'/>
@@ -27,25 +27,35 @@
     <div class="section title-page bg-image" id="title-bg" data-anchor="section-title">
         <div class="bg-opacity">
           <div id="title-wrapper">
-              <h1 id="main-title">Visual MAL</h1>
-              <h4 id="main-subtitle">Exploring Your MyAnimeList Data</h4>
+              <h1 id="main-title">Visual Kitsu</h1>
+              <h4 id="main-subtitle">Exploring Your Kitsu Data</h4>
               <fieldset>
+                <form action="/getUserId" method="post">
+                  <input name="username" type="text" class="ghost-input" placeholder="Enter your Kitsu username" required>
+                  <input type="submit" class="ghost-button" value="Get User Id">
+                </form>
+
                 <form action="/getList" method="post">
-                  <input name="username" type="text" class="ghost-input" placeholder="Enter your MAL username" required>
+                  <input name="userId" type="text" class="ghost-input" placeholder="Enter your Kitsu userId" required>
                   <input type="submit" class="ghost-button" value="Get Anime info">
                 </form>
-                <form action="/getFriends" method="post">
+
+                <!-- <form action="/getFriends" method="post">
                   <input name="username" type="text" class="ghost-input" placeholder="Enter your MAL username" required>
                   <input type="submit" class="ghost-button" value="Get Friends">
-                </form>
+                </form> -->
               </fieldset>
+              <% if(userId !== null){ %>
+                <p>UserId: <%= userId %></p>
+              <% } %>
+
               <% if(animeList !== null){ %>
                 <p><%= animeList %></p>
               <% } %>
               
-              <% if(friendList != null) { %>
+              <!-- <% if(friendList != null) { %>
                 <p><%= friendList %></p>
-              <% } %>
+              <% } %> -->
       
               <% if(error !== null){ %>
                 <p><%= error %></p>
